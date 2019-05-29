@@ -4,7 +4,7 @@ description: >-
   Christopher Thubert | Site Web
   Développeur Back-end
 baseurl: ""
-url: ""
+url: "chris-scientist.github.io"
 
 # Build settings
 markdown: kramdown
