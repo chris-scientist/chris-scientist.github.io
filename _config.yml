@@ -1,0 +1,10 @@
+
+title: chris-scientist
+description: >-
+  Christopher Thubert | Site Web
+  Développeur Back-end
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown

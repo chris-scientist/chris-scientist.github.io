@@ -1,0 +1,22 @@
+
+.card-title,
+.card-text,
+.card-link,
+.card-link:hover {
+	color: #333;
+}
+
+.card-link:hover {
+	text-decoration: underline;
+}
+
+.card {
+	text-align: left;
+	margin: 10px;
+}
+
+.update-at {
+	font-size: small;
+	text-align: left;
+	margin-top: 20px;
+}
