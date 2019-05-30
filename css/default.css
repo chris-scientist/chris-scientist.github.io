@@ -15,7 +15,7 @@
 	margin: 10px;
 }
 
-.nav-item:hover {
+.nav-link:hover {
 	text-decoration: underline;
 }
 
