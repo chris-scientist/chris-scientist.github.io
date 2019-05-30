@@ -15,6 +15,10 @@
 	margin: 10px;
 }
 
+.nav-item:hover {
+	text-decoration: underline;
+}
+
 .update-at {
 	font-size: small;
 	text-align: left;
