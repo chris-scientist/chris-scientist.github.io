@@ -21,7 +21,7 @@ permalink: /
 </ul>
 
 <p class="lead" >
-	Je me passionne pour le développement logiciel depuis des années, soit un peu avant les années 2010. J'ai appris la programmation en autodidacte sur le Web, sur ce qui s'appelait à l'époque &laquo; le site du zéro &raquo; (qui est aujourd'hui OpenClassRooms). Après le baccalauréat (filière Scientifique) en juin 2011, j'ai réalisé 5 année d'études en Informatique.
+	Je me passionne pour le développement logiciel depuis des années, soit un peu avant les années 2010. J'ai appris la programmation en autodidacte sur le Web, sur ce qui s'appelait à l'époque &laquo; le site du zéro &raquo; (qui est aujourd'hui OpenClassRooms). Après le baccalauréat (filière Scientifique) en juin 2011, j'ai réalisé 5 années d'études en Informatique.
 </p>
 
 <p class="lead" >
