@@ -2,12 +2,23 @@
 layout: creations
 title: Créations
 permalink: /creations/
-update: "29/05/2019 13h00"
+update: "28/08/2019 18h00"
 ---
 
 <p class="lead" style="margin-top:20px" >Ces quelques créations sont exclusivement extra-professionnelles.</p>
 
 <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <img src="/img/creations/platformer-01.gif" class="card-img-top" alt="Capture de ce premier platformer">
+      <div class="card-body">
+        <h5 class="card-title">Platformers : les bases</h5>
+        <h6 class="card-subtitle text-muted" >Gamebuino / Août 2019</h6>
+        <p class="card-text">Ce workshop propose de découvrir les bases du développement d'un jeu de plateformes.</p>
+        <a href="https://chris-scientist.github.io/gb-platformer-ws-01/" class="card-link">Workshop</a>
+      </div>
+    </div>
+  </div>
   <div class="col-sm-6">
     <div class="card">
       <img src="/img/creations/rubiks-cube.BMP" class="card-img-top" alt="Rubik's cube">
@@ -17,18 +28,6 @@ update: "29/05/2019 13h00"
         <p class="card-text">Ce jeu est ma première réalisation pour Gamebuino.</p>
         <a href="https://gamebuino.com/fr/creations/jeu-rubik-s-cube" class="card-link">Jeu</a>
         <a href="https://github.com/chris-scientist/gb-rubiks-cube" class="card-link">Dépôt</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <img src="/img/creations/met-hanoi.BMP" class="card-img-top" alt="Met'hanoï">
-      <div class="card-body">
-        <h5 class="card-title">Met'hanoï</h5>
-        <h6 class="card-subtitle text-muted" >Gamebuino / Octobre 2018</h6>
-        <p class="card-text">Mon second jeu est une revisite du jeu des tours de hanoï.</p>
-        <a href="https://gamebuino.com/fr/creations/met-hanoi" class="card-link">Jeu</a>
-        <a href="https://github.com/chris-scientist/gb-hanoi" class="card-link">Dépôt</a>
       </div>
     </div>
   </div>
@@ -49,6 +48,18 @@ update: "29/05/2019 13h00"
         <h6 class="card-subtitle text-muted" >Gamebuino / Octobre 2018</h6>
         <p class="card-text">Autre workshop qui présente comment partager son code source sur GitHub.</p>
         <a href="https://gamebuino.com/fr/academy/workshop/partagez-votre-projet-sur-github-1" class="card-link">Workshop</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <img src="/img/creations/met-hanoi.BMP" class="card-img-top" alt="Met'hanoï">
+      <div class="card-body">
+        <h5 class="card-title">Met'hanoï</h5>
+        <h6 class="card-subtitle text-muted" >Gamebuino / Octobre 2018</h6>
+        <p class="card-text">Mon second jeu est une revisite du jeu des tours de hanoï.</p>
+        <a href="https://gamebuino.com/fr/creations/met-hanoi" class="card-link">Jeu</a>
+        <a href="https://github.com/chris-scientist/gb-hanoi" class="card-link">Dépôt</a>
       </div>
     </div>
   </div>
