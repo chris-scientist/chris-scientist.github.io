@@ -1,0 +1,73 @@
+[{
+	"title": "Playground Arduino",
+	"type": "Repository",
+	"device": "Arduino",
+	"created-at": "Mars 2020",
+	"description": "Mes premières applications sur Arduino MEGA 2560 réalisées sur Arduino IDE.",
+	"src-img": "ard-indicator.gif",
+	"alt-img": "Exemple d'un mono-clignotant",
+	"repository": "https://github.com/chris-scientist/ard-workspace"
+},
+{
+	"title": "Platformers : les bases",
+	"type": "Workshop",
+	"device": "Gamebuino",
+	"created-at": "Août 2019",
+	"description": "Ce workshop propose de découvrir les bases du développement d'un jeu de plateformes.",
+	"src-img": "platformer-01.gif",
+	"alt-img": "Capture de ce premier platformer",
+	"ws-link": "https://chris-scientist.github.io/gb-platformer-ws-01/"
+},
+{
+	"title": "Mélanger des cartes",
+	"type": "Game",
+	"device": "Gamebuino",
+	"created-at": "Août 2019",
+	"description": "Application pour mélanger des cartes.",
+	"src-img": "shuffling.gif",
+	"alt-img": "Mélanger des cartes",
+	"game-link": "https://gamebuino.com/fr/creations/melanger-des-cartes-shuffling-cards",
+	"repository": "https://github.com/chris-scientist/gb-sorting-cards"
+},
+{
+	"title": "Met'hanoï",
+	"type": "Game",
+	"device": "Gamebuino",
+	"created-at": "Octobre 2018",
+	"description": "Mon second jeu est une revisite du jeu des tours de hanoï.",
+	"src-img": "met-hanoi.BMP",
+	"alt-img": "Met'hanoï",
+	"game-link": "https://gamebuino.com/fr/creations/met-hanoi",
+	"repository": "https://github.com/chris-scientist/gb-hanoi"
+},
+{
+	"title": "Git et GitHub",
+	"type": "Workshop",
+	"device": "Gamebuino",
+	"created-at": "Octobre 2018",
+	"description": "Autre workshop qui présente comment partager son code source sur GitHub.",
+	"src-img": "git-ws.png",
+	"alt-img": "Git X GitHub Workshop",
+	"ws-link": "https://gamebuino.com/fr/academy/workshop/partagez-votre-projet-sur-github-1"
+},
+{
+	"title": "Sokoban",
+	"type": "Workshop",
+	"device": "Gamebuino",
+	"created-at": "Août 2018",
+	"description": "Mon premier workshop qui introduit la POO et le MVC autour d'un exemple concret qui est le jeu Sokoban.",
+	"src-img": "sokoban.BMP",
+	"alt-img": "Sokoban Workshop",
+	"ws-link": "https://gamebuino.com/fr/academy/workshop/sokoban-vs-poo"
+},
+{
+	"title": "Rubik's cube",
+	"type": "Game",
+	"device": "Gamebuino",
+	"created-at": "Juin 2018",
+	"description": "Ce jeu est ma première réalisation pour Gamebuino.",
+	"src-img": "rubiks-cube.BMP",
+	"alt-img": "Rubik's cube",
+	"game-link": "https://gamebuino.com/fr/creations/jeu-rubik-s-cube",
+	"repository": "https://github.com/chris-scientist/gb-rubiks-cube"
+}]
