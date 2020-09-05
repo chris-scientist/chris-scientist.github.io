@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Image Generator for micro:bit</title>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			#main-container-mobile {
+				display: none;
+				width: 75%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50vh;
+				transform: translateY(-50%);
+				background-color: white;
+				border-radius: 10px;
+			}
+			#main-container-mobile h1,
+			#main-container-mobile p {
+				text-align: center;
+			}
+			#main-container-mobile p {
+				color: red;
+			}
+			#main-container-mobile p span {
+				font-weight: bold;
+			}
+
+			body {
+				background-color: #333;
+				color: #333;
+			}
+			#generated-code {
+				width: 80%;
+				height: 150px;
+			}
+			#main-container {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50vh;
+				transform: translateY(-50%);
+				background-color: white;
+				border-radius: 10px;
+			}
+			#main-container h1 {
+				text-align: center;
+			}
+			#main-container h1 #help {
+				font-size: 0.75em;
+			}
+			#toolbar {
+				margin-bottom: 10px;
+			}
+			#toolbar #reverse {
+				color: blue;
+			}
+			#toolbar #on {
+				color: red;
+			}
+			#app-content tr td:first-child {
+				width: 25%;
+				min-width: 25%;
+				max-width: 25%;
+			}
+			#app-content tr td #led-matrix tr td {
+				width: 25px;
+				min-width: 25px;
+				max-width: 25px;
+			}
+			#app-content h2 {
+				margin: 0;
+			}
+			#legend h3,
+			#legend p {
+				margin: 0;
+			}
+			#legend h3 {
+				margin-top: 10px;
+			}
+			#legend p {
+				padding-left: 5px;
+			}
+
+			/* Smartphone Portrait and Landscape */
+			@media only screen 
+				and (min-device-width : 320px)
+				and (max-device-width : 480px) {
+
+				#main-container {
+					display: none;
+				}
+				#main-container-mobile {
+					display: inline;
+				}
+
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" ></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#help-dialog-box').dialog({
+					modal: true,
+					width: 750,
+					autoOpen: false,
+					buttons: {
+						Ok: function() {
+							$(this).dialog("close");
+						}
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="help-dialog-box" title="Help of Image Generator" >
+			<h2>Credits</h2>
+			<p>
+				Author : chris-scientist<br />
+				Created at : 05/09/2020<br />
+				Current version : 0.1.0
+			</p>
+			<h2>Goal of this tool</h2>
+			<p>
+				This tool generate C++ array of boolean, which represents a static image for my micro:bit API.
+			</p>
+			<h2>Help</h2>
+			<h3>Toolbar</h3>
+			<ul>
+				<li>Reverse : switch the state of all LEDs, if the state is true then to set at false, else if the state is false then to set at true.</li>
+				<li>Turn ON all LEDs : all state LEDs are true when you click on this button.</li>
+				<li>Turn OFF all LEDs : all state LEDs are false when you click on this button.</li>
+			</ul>
+			<h3>Workflow</h3>
+			<ol>
+				<li>Design your static image by clicking on the LEDs of the matrix.</li>
+				<li>Copy the source code in your C++ application.</li>
+				<li>That's all !</li>
+			</ol>
+		</div>
+		<div id="main-container-mobile" >
+			<h1>Image Generator</h1>
+			<p>To use this tool : please, use a web browser on <span>computer</span>.</p>
+		</div>
+		<div id="main-container" >
+			<h1>Image Generator <button id="help" >Help</button></h1>
+			<div id="toolbar" >
+				<button id="reverse" >Reverse</button>
+				<button id="on" >Turn ON all LEDs</button>
+				<button id="off" >Turn OFF all LEDs</button>
+			</div>
+			<table id="app-content" >
+				<tr>
+					<td><h2>LED Matrix</h2></td>
+					<td><h2>Source code</h2></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="led-matrix" >
+							<tr>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-0" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-1" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-2" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-3" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-4" /></td>
+							</tr>
+							<tr>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-5" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-6" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-7" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-8" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-9" /></td>
+							</tr>
+							<tr>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-10" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-11" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-12" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-13" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-14" /></td>
+							</tr>
+							<tr>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-15" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-16" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-17" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-18" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-19" /></td>
+							</tr>
+							<tr>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-20" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-21" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-22" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-23" /></td>
+								<td><img src="/tools/micro-bit/image-generator/img/led-off.png" id="led-24" /></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<textarea id="generated-code"></textarea>
+					</td>
+				</tr>
+			</table>
+			<div id="legend" >
+				<h3>Legend</h3>
+				<p>
+					<img src="./img/led-on.png" alt="LED On" /> = LED On<br/>
+					<img src="./img/led-off.png" alt="LED Off" /> = LED Off
+				</p>
+			</div>
+		</div>
+		<script type="text/javascript" >
+			var stateOfLeds = {
+				'0': false,
+				'1': false,
+				'2': false,
+				'3': false,
+				'4': false,
+				'5': false,
+				'6': false,
+				'7': false,
+				'8': false,
+				'9': false,
+				'10': false,
+				'11': false,
+				'12': false,
+				'13': false,
+				'14': false,
+				'15': false,
+				'16': false,
+				'17': false,
+				'18': false,
+				'19': false,
+				'20': false,
+				'21': false,
+				'22': false,
+				'23': false,
+				'24': false
+			};
+
+			function generateCode(aStateOfLed) {
+				var sourceCode = "const bool * MicroBitStaticImage::MY_IMG = new bool[IMAGE_SIZE]{\n";
+				var propNames = Object.getOwnPropertyNames(aStateOfLed);
+				var counterValue = 0;
+				propNames.forEach(function(pName) {
+					var desc = Object.getOwnPropertyDescriptor(aStateOfLed, pName);
+					var state = 'false';
+					if(desc['value']) {
+						state = 'true';
+					}
+					counterValue++;
+					var isNewLine = (counterValue % 5 == 0);
+					sourceCode += state;
+					if(pName != '24') {
+						sourceCode += ",";
+					}
+					if(isNewLine) {
+						sourceCode += "\n";
+						counterValue = 0;
+					}
+				});
+				sourceCode += "};";
+				$('#generated-code').val(sourceCode);
+			}
+
+			function reverse(aStateOfLed) {
+				var propNames = Object.getOwnPropertyNames(aStateOfLed);
+				propNames.forEach(function(pName) {
+					var desc = Object.getOwnPropertyDescriptor(aStateOfLed, pName);
+					aStateOfLed[pName] = (! desc['value']);
+					var imgPath = '/tools/micro-bit/image-generator/img/led-off.png'
+					if(aStateOfLed[pName]) {
+						imgPath = '/tools/micro-bit/image-generator/img/led-on.png';
+					}
+					$('#led-' + pName).attr('src', imgPath);
+				});
+				generateCode(aStateOfLed);
+			}
+
+			function sameStateForAllLed(aStateOfLed, newState) {
+				var propNames = Object.getOwnPropertyNames(aStateOfLed);
+				propNames.forEach(function(pName) {
+					aStateOfLed[pName] = newState;
+					var imgPath = '/tools/micro-bit/image-generator/img/led-off.png'
+					if(aStateOfLed[pName]) {
+						imgPath = '/tools/micro-bit/image-generator/img/led-on.png';
+					}
+					$('#led-' + pName).attr('src', imgPath);
+				});
+				generateCode(aStateOfLed);
+			}
+
+			function reverseOneLedState(aStateOfLed, id, elt) {
+				aStateOfLed[id] = (! aStateOfLed[id]);
+				var imgPath = '/tools/micro-bit/image-generator/img/led-off.png'
+				if(aStateOfLed[id]) {
+					imgPath = '/tools/micro-bit/image-generator/img/led-on.png';
+				}
+				elt.attr('src', imgPath);
+				generateCode(aStateOfLed);
+			}
+
+			$('#reverse').click(function() {
+				reverse(stateOfLeds);
+			});
+			$('#on').click(function() {
+				sameStateForAllLed(stateOfLeds, true);
+			});
+			$('#off').click(function() {
+				sameStateForAllLed(stateOfLeds, false);
+			});
+			$('#led-0').click(function() {
+				reverseOneLedState(stateOfLeds, '0', $(this));
+			});
+			$('#led-1').click(function() {
+				reverseOneLedState(stateOfLeds, '1', $(this));
+			});
+			$('#led-2').click(function() {
+				reverseOneLedState(stateOfLeds, '2', $(this));
+			});
+			$('#led-3').click(function() {
+				reverseOneLedState(stateOfLeds, '3', $(this));
+			});
+			$('#led-4').click(function() {
+				reverseOneLedState(stateOfLeds, '4', $(this));
+			});
+			$('#led-5').click(function() {
+				reverseOneLedState(stateOfLeds, '5', $(this));
+			});
+			$('#led-6').click(function() {
+				reverseOneLedState(stateOfLeds, '6', $(this));
+			});
+			$('#led-7').click(function() {
+				reverseOneLedState(stateOfLeds, '7', $(this));
+			});
+			$('#led-8').click(function() {
+				reverseOneLedState(stateOfLeds, '8', $(this));
+			});
+			$('#led-9').click(function() {
+				reverseOneLedState(stateOfLeds, '9', $(this));
+			});
+			$('#led-10').click(function() {
+				reverseOneLedState(stateOfLeds, '10', $(this));
+			});
+			$('#led-11').click(function() {
+				reverseOneLedState(stateOfLeds, '11', $(this));
+			});
+			$('#led-12').click(function() {
+				reverseOneLedState(stateOfLeds, '12', $(this));
+			});
+			$('#led-13').click(function() {
+				reverseOneLedState(stateOfLeds, '13', $(this));
+			});
+			$('#led-14').click(function() {
+				reverseOneLedState(stateOfLeds, '14', $(this));
+			});
+			$('#led-15').click(function() {
+				reverseOneLedState(stateOfLeds, '15', $(this));
+			});
+			$('#led-16').click(function() {
+				reverseOneLedState(stateOfLeds, '16', $(this));
+			});
+			$('#led-17').click(function() {
+				reverseOneLedState(stateOfLeds, '17', $(this));
+			});
+			$('#led-18').click(function() {
+				reverseOneLedState(stateOfLeds, '18', $(this));
+			});
+			$('#led-19').click(function() {
+				reverseOneLedState(stateOfLeds, '19', $(this));
+			});
+			$('#led-20').click(function() {
+				reverseOneLedState(stateOfLeds, '20', $(this));
+			});
+			$('#led-21').click(function() {
+				reverseOneLedState(stateOfLeds, '21', $(this));
+			});
+			$('#led-22').click(function() {
+				reverseOneLedState(stateOfLeds, '22', $(this));
+			});
+			$('#led-23').click(function() {
+				reverseOneLedState(stateOfLeds, '23', $(this));
+			});
+			$('#led-24').click(function() {
+				reverseOneLedState(stateOfLeds, '24', $(this));
+			});
+
+			generateCode(stateOfLeds);
+
+			$('#help').click(function() {
+				$('#help-dialog-box').dialog("open");
+			});
+		</script>
+	</body>
+</html>
