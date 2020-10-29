@@ -48,7 +48,7 @@
 	"description": "Autre workshop qui présente comment partager son code source sur GitHub.",
 	"src-img": "git-ws.png",
 	"alt-img": "Git X GitHub Workshop",
-	"ws-link": "https://gamebuino.com/fr/academy/workshop/partagez-votre-projet-sur-github-1"
+	"ws-link": "https://chris-scientist.github.io/gamebuino/academy-fr/partagez-votre-projet-sur-github-1.html"
 },
 {
 	"title": "Sokoban",
@@ -58,7 +58,7 @@
 	"description": "Mon premier workshop qui introduit la POO et le MVC autour d'un exemple concret qui est le jeu Sokoban.",
 	"src-img": "sokoban.BMP",
 	"alt-img": "Sokoban Workshop",
-	"ws-link": "https://gamebuino.com/fr/academy/workshop/sokoban-vs-poo"
+	"ws-link": "https://chris-scientist.github.io/gamebuino/academy-fr/sokoban-vs-poo.html"
 },
 {
 	"title": "Rubik's cube",
