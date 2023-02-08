@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{{ site.title }}</title>
+		<style type="text/css" >
+			html,
+			body {
+				height: 100%;
+				background-color: #333;
+				color: #fff;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			header {
+				margin-bottom: 15%;
+			}
+			.comment {
+				color: green;
+				font-size: 2em;
+				font-family: 'Courier New', Courier, monospace;
+			}
+			ul {
+				list-style-type: none;
+				padding: 0;
+			}
+			#networks-global-container {
+				margin-top: 5%;
+			}
+			.networks-container {
+				margin-left: 32%;
+			}
+			.network-container {
+				float: left;
+				size: 2%;
+				margin-right: 1%;
+				padding: 5px;
+				border-radius: 5px;
+			}
+			.network-container ul li a {
+				color: #fff;
+				text-decoration: none;
+				font-family: 'Courier New', Courier, monospace;
+			}
+			.network-container ul li a:hover,
+			.network-container ul li a:focus {
+				text-decoration: underline;
+			}
+			footer {
+				clear: left;
+				position: absolute;
+				bottom: 1%;
+				left: 45%;
+			}
+			/* Couleurs fond */
+			.bg-twitter {
+				background-color: #00ACEE;
+			}
+			.bg-instagram {
+				background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+			}
+			.bg-discord {
+				background-color: #5661F5;
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	</head>
+	<body>
+		{{ content }}
+	</body>
+</html>

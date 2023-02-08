@@ -1,0 +1,11 @@
+
+title: chris-scientist studio
+description: >-
+  chris-scientist studio | Site Web
+  Développeur logiciels
+baseurl: ""
+url: "https://chris-scientist.github.io"
+timezone: Europe/Paris
+
+# Build settings
+markdown: kramdown
