@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{{ site.title }}</title>
+		<style type="text/css" >
+			html,
+			body {
+				height: 100%;
+				background-color: #333;
+				color: #fff;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			header {
+				margin-bottom: 15%;
+			}
+			.comment {
+				color: green;
+				font-size: 2em;
+				font-family: 'Courier New', Courier, monospace;
+			}
+			ul {
+				list-style-type: none;
+				padding: 0;
+			}
+			#networks-global-container {
+				margin-top: 5%;
+			}
+			.networks-container {
+				width: 75%;
+				margin-left: 15%;
+			}
+			.network-container {
+				float: left;
+				width: 30%;
+				margin-right: 1%;
+				padding: 5px;
+				border-radius: 5px;
+			}
+			.network-container ul li a {
+				color: #fff;
+				text-decoration: none;
+				font-family: 'Courier New', Courier, monospace;
+			}
+			.network-container ul li a:hover,
+			.network-container ul li a:focus {
+				text-decoration: underline;
+			}
+			footer {
+				clear: left;
+				position: absolute;
+				bottom: 1%;
+				left: 45%;
+			}
+			.bg-codingame ul li a,
+			.bg-instagram ul li a {
+			    color: #333;
+			}
+			/* Couleurs fond */
+			.bg-codingame {
+			    background-color: #f2bb13;
+			    color: #333;
+			}
+			.bg-instagram {
+				background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+				color: #333;
+			}
+			.bg-discord {
+				background-color: #5661F5;
+			}
+			/* In portrait (820x1180 or 1024x1366) */
+			@media only screen and (orientation: portrait) and (
+				((max-device-width: 820px) and (max-device-height: 1180px)) or 
+				((max-device-width: 1024px) and (max-device-height: 1366px))
+			) {
+				header {
+					margin-bottom: 8%;
+				}
+				.networks-container {
+					width: 90%;
+					margin-left: 6%;
+				}
+				.network-container {
+					float: left;
+					width: 30%;
+				}
+				footer {
+					position: absolute;
+					left: 42%;
+				}
+			}
+			/* For Surface in portrait */
+			@media only screen and (max-device-width: 912px) and (max-device-height: 1368px) and (orientation: portrait) {
+				header {
+					margin-bottom: 8%;
+				}
+				.networks-container {
+					width: 90%;
+					margin-left: 7%;
+				}
+				.network-container {
+					float: left;
+					width: 30%;
+				}
+				footer {
+					position: absolute;
+					left: 42%;
+				}
+			}
+			/* In portrait */
+			@media only screen and (orientation: portrait) and (
+				((max-device-width: 360px) and (max-device-height: 740px)) or 
+				((max-device-width: 390px) and (max-device-height: 844px)) or 
+				((max-device-width: 412px) and (max-device-height: 915px)) or 
+				((max-device-width: 414px) and (max-device-height: 736px)) or 
+				((max-device-width: 414px) and (max-device-height: 896px)) or 
+				((max-device-width: 480px) and (max-device-height: 854px)) or 
+				((max-device-width: 600px) and (max-device-height: 960px)) or 
+				((max-device-width: 800px) and (max-device-height: 1280px))
+			) {
+				section {
+					margin-bottom: 10%;
+				}
+				.networks-global-container {
+					margin-bottom: 0%;
+				}
+				.networks-container {
+					width: 50%;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.network-container {
+					float: none;
+					width: 100%;
+					font-size: 2em;
+					margin-bottom: 5%;
+				}
+			}
+			/* In landscape */
+			@media only screen and (orientation: landscape) and (
+				((max-device-width: 736px) and (max-device-height: 414px)) or 
+				((max-device-width: 740px) and (max-device-height: 360px)) or 
+				((max-device-width: 844px) and (max-device-height: 390px)) or 
+				((max-device-width: 854px) and (max-device-height: 480px)) or 
+				((max-device-width: 896px) and (max-device-height: 414px)) or 
+				((max-device-width: 915px) and (max-device-height: 412px)) or 
+				((max-device-width: 960px) and (max-device-height: 600px)) or 
+				((max-device-width: 1180px) and (max-device-height: 820px)) or 
+				((max-device-width: 1280px) and (max-device-height: 800px)) or 
+				((max-device-width: 1366px) and (max-device-height: 1024px)) or 
+				((max-device-width: 1368px) and (max-device-height: 912px))
+			) {
+				header {
+					margin-bottom: 8%;
+				}
+				.networks-container {
+					width: 90%;
+					margin-left: 7%;
+				}
+				.network-container {
+					float: left;
+					width: 30%;
+				}
+				footer {
+					position: absolute;
+					left: 42%;
+				}
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	</head>
+	<body>
+		{{ content }}
+	</body>
+</html>
