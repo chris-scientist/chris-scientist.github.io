@@ -29,7 +29,7 @@ permalink: /
 		<li class="network-container bg-discord" >
 			<ul>
 				<li>Discord</li>
-				<li><a href="javascript:void(0);" >chris-scientist#3276</a></li>
+				<li><a href="javascript:void(0);" >chris.scientist</a></li>
 			</ul>
 		</li>
 	</ul>
